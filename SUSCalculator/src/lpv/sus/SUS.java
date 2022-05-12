@@ -16,16 +16,16 @@ public class SUS {
 	    		continue;
 	    	}
 	    	
-	    	// Percorre as linhas/questões para obter o valor das respostas.
+	    	// Percorre as linhas/questï¿½es para obter o valor das respostas.
 	    	for(int i=0; i<l.size(); i++) {	 
-	    		// Ignora a primeira coluna que possui data e hora.
+	    		// Ignora a primeira coluna que possui dados data e hora.
 	    		if(i==0)
 	    			continue;
 
 	    		// Transforma o valor da resposta no tipo int.
 	    		answerValue = Integer.parseInt(l.get(i).toString());
 	    		
-	    		// Verifica se a questão é par ou ímpar.
+	    		// Verifica se a questï¿½o ï¿½ par ou ï¿½mpar.
 	    		if(i%2 == 0) {
 	    			sum += 5 - answerValue;
 	    		}
@@ -35,13 +35,13 @@ public class SUS {
 	    		   		
 	    	}  // for interno
 	    	
-	    	// Após realizar a soma das questões, multiplica por 2.5.
+	    	// Apï¿½s realizar a soma das questï¿½es, multiplica por 2.5.
 	    	result += sum*2.5f;
 	    	System.out.println(sum*2.5f);
 	    	sum = 0;
 	    }
 		
-		// Realiza a média dos resultados.
+		// Realiza a mï¿½dia dos resultados.
 		finalResult = result/(records.size()-1);
 		System.out.printf("\nResultado: %.1f", finalResult);
 		

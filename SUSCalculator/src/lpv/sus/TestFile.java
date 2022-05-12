@@ -7,7 +7,7 @@ public class TestFile {
 	}
 
 	private static void testeFile() {
-		File.readFile("C:\\Users\\talit\\OneDrive\\Documentos\\TSI\\3° Período\\LPV\\teste_usabilidade_YouTube.csv");
+		File.readFile("/home/talita/Documentos/TSI/3_Periodo_2022/LPV/youtube.csv");
 	}
 
 }
