@@ -37,6 +37,7 @@ public class ReadFile {
 				JFileChooser fileChooser = new JFileChooser();
 				 if(fileChooser.showSaveDialog(null) == JFileChooser.APPROVE_OPTION) {
 					 System.out.println(fileChooser.getSelectedFile().toString());
+					 
 					 File.readFile(fileChooser.getSelectedFile().toString());
 				 }
 			}

@@ -7,7 +7,13 @@ public class TestFile {
 	}
 
 	private static void testeFile() {
-		File.readFile("/home/talita/Documentos/TSI/3_Periodo_2022/LPV/youtube.csv");
+		try {			
+			//File file = new File();
+			File.readFile("C:\\Users\\talit\\OneDrive\\Documentos\\TSI\\3° Período\\LPV\\teste.txt");
+		}
+		catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
 	}
 
 }

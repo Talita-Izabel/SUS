@@ -6,7 +6,7 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/talita/Documentos/TSI/jar/jar_files/commons-lang3-3.6.jar"/>
-	<classpathentry kind="lib" path="/home/talita/Documentos/TSI/jar/jar_files/opencsv-4.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/talit/OneDrive/Documentos/TSI/jar/commons-lang3-3.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/talit/OneDrive/Documentos/TSI/jar/opencsv-4.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

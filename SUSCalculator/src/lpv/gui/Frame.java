@@ -14,6 +14,9 @@ import javax.swing.JFileChooser;
 import java.awt.Font;
 import javax.swing.SwingConstants;
 import javax.swing.border.TitledBorder;
+
+import lpv.sus.File;
+
 import javax.swing.UIManager;
 import java.awt.Color;
 import javax.swing.border.BevelBorder;
@@ -52,6 +55,7 @@ public class Frame extends JFrame {
 				JFileChooser fileChooser = new JFileChooser();
 				 if(fileChooser.showSaveDialog(null) == JFileChooser.APPROVE_OPTION) {
 					 System.out.println(fileChooser.getSelectedFile().toString());
+					 File.readFile(fileChooser.getSelectedFile().toString());
 					 dispose();
 				 }
 			}
