@@ -6,6 +6,7 @@ import java.util.List;
 import java.io.FileReader;
 
 import com.opencsv.CSVReader;
+import lpv.gui.Error;
 
 public class File {
 	
@@ -26,6 +27,7 @@ public class File {
 		    SUS.calculateEvaluation(records);
 		    
 		}catch(Exception e) {
+			Error.messageError(e.getMessage());
 			System.out.println(e.getMessage());
 		}
 		return records;
