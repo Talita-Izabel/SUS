@@ -8,6 +8,7 @@ import java.io.FileReader;
 import com.opencsv.CSVReader;
 import lpv.gui.Error;
 
+//Tratamento de evento
 public class File {
 	
 	public static List<List<String>> readFile(String path) {
@@ -17,12 +18,13 @@ public class File {
 		    String[] values = null;
 		    
 		    if(!verifyExtension(path))
-				throw new Exception("File invalid! File is not CSV type.");
-		    
+				throw new Exception("File invalid! File is not CSV type.");		   
+		    	
 		    while ((values = csvReader.readNext()) != null) {
 		        records.add(Arrays.asList(values));
 		    }
 		    
+		        
 		    //return records;
 		    SUS.calculateEvaluation(records);
 		    

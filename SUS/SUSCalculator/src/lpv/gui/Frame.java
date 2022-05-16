@@ -1,6 +1,5 @@
 package lpv.gui;
 
-import java.awt.BorderLayout.*;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -24,6 +23,7 @@ import java.awt.event.ActionEvent;
 
 public class Frame extends JFrame {
 
+	//Container
 	private JPanel contentPane;
 
 	public Frame() {
@@ -36,26 +36,33 @@ public class Frame extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		//Widget
 		JLabel label = new JLabel("Escolha o arquivo .csv para calcular a nota de usabilidade");
 		label.setHorizontalAlignment(SwingConstants.CENTER);
 		label.setFont(new Font("Tahoma", Font.BOLD, 22));
 		label.setBounds(23, 101, 829, 25);
 		contentPane.add(label);
 		
+		//Widget
 		JButton btnSelecionarArquivo = new JButton("Selecionar arquivo");
 		
+		//Evento
 		btnSelecionarArquivo.addActionListener(new ActionListener() {
-			@Override
+			//Tratamento de evento
+			@Override 
 			public void actionPerformed(ActionEvent e) {
 				JFileChooser fileChooser = new JFileChooser();
 				fileChooser.setFileFilter(new FileNameExtensionFilter("Planilhas", "csv"));
 				fileChooser.setAcceptAllFileFilterUsed(false);
+				
 				 if(fileChooser.showSaveDialog(null) == JFileChooser.APPROVE_OPTION) {
-					 System.out.println(fileChooser.getSelectedFile().toString());
+					 //Callback
 					 File.readFile(fileChooser.getSelectedFile().toString());
-					 dispose();
-					 
+//					 dispose();
 				 }
+				 else
+					 if(fileChooser.showSaveDialog(null) == JFileChooser.ERROR_OPTION) 
+						 Error.messageError("Erro ao abrir arquivo!");		 
 			}
 		});
 
