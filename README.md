@@ -11,3 +11,7 @@ JAR necessárias: https://jar-download.com/artifacts/com.opencsv/opencsv/4.1/sou
 
 ### Resultado do SUS
 ![Alt text](./screenshoot/resultado.png?raw=true "Resultado SUS")
+
+
+### Erro arquivo vazio
+![Alt text](./screenshoot/erroArquivoVazio.png?raw=true "Erro arquivo erro")
